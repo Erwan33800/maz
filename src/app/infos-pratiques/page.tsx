@@ -81,7 +81,7 @@ export default function InfosPratiquesPage() {
           <section>
             <SectionTitle id="acces">🚌 ACCÈS & NAVETTES</SectionTitle>
             <div className="text-lg space-y-4">
-              <p>📍 L'adresse te sera communiquée quelques jours avant le festival.</p>
+              <p>📍 L&#39;adresse te sera communiquée quelques jours avant le festival.</p>
               <p>Depuis la gare de Bordeaux, une navette sera dispo :</p>
               <ul className="list-disc list-inside">
                 <li>Jeudi 25 sept. (aller)</li>
