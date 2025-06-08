@@ -22,10 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${anton.variable}`}>
-      <body className="flex flex-col min-h-screen">
+      <body className="min-h-screen">
         <EntryAnimation />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
