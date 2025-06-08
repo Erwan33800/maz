@@ -38,7 +38,7 @@ export default function BilletteriePage() {
 
       <div className="relative z-10 bg-black">
         <div className="max-w-4xl mx-auto p-8 md:p-16 text-center">
-          <p className="text-2xl font-anton mb-10 text-white">On reste sur la même recette que les précédantes éditions, mais avec une nouveauté cette année on vous propose de prendre des pack en équipes et économiser quelques euros !</p>
+          <p className="text-2xl font-anton mb-10 text-white text-justify">On reste sur la même recette que les précédantes éditions, mais avec une nouveauté cette année on vous propose de prendre des pack en équipes et économiser quelques euros !</p>
           <div className="space-y-8 max-w-2xl mx-auto">
             <div className="bg-gray-800 p-8 rounded-lg">
               <Link href="https://www.helloasso.com/associations/maz/evenements/maz-5?fbclid=PAZXh0bgNhZW0CMTEAAab89EeMrHh2h34TYZDswlizpZI1NRpznyfJ9MTyq4Scbe3k5zBDqAX5WX4_aem_2S9KMjqJY4wuxJCejYR7lw" target="_blank" rel="noopener noreferrer">

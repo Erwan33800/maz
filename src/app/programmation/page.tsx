@@ -38,7 +38,7 @@ export default function ProgrammationPage() {
 
       <div className="relative z-10 bg-black">
         <div className="max-w-4xl mx-auto p-8 md:p-16">
-          <p className="text-2xl text-center">La programmation sera dévoilée prochainement...</p>
+          <p className="text-2xl text-center text-justify">La programmation sera dévoilée très prochainement...</p>
         </div>
       </div>
       
