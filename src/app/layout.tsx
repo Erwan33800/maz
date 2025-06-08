@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Anton } from "next/font/google";
 import "./globals.css";
 import EntryAnimation from "@/components/animations/EntryAnimation";
-import Footer from "@/components/layout/Footer";
 
 const anton = Anton({
   subsets: ["latin"],
