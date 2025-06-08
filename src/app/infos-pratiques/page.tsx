@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import MobileMenu from '@/components/layout/MobileMenu';
+import Footer from '@/components/layout/Footer';
 
 const SectionTitle = ({ id, children }: { id: string; children: React.ReactNode }) => (
   <h2 id={id} className="text-4xl font-anton uppercase mt-12 mb-6 scroll-mt-24">
@@ -132,6 +133,7 @@ export default function InfosPratiquesPage() {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

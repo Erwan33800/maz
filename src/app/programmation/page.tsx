@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import MobileMenu from '@/components/layout/MobileMenu';
+import Footer from '@/components/layout/Footer';
 
 export default function ProgrammationPage() {
   return (
@@ -31,6 +32,8 @@ export default function ProgrammationPage() {
           <p className="text-2xl text-center">La programmation sera dévoilée prochainement...</p>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 }
