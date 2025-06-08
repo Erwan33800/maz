@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import MobileMenu from '@/components/layout/MobileMenu';
 import Footer from '@/components/layout/Footer';
 
@@ -14,7 +15,15 @@ export default function ProgrammationPage() {
           className="object-cover z-0"
         />
         <div className="relative z-20 flex justify-center items-start h-full p-8">
-          <h1 className="text-6xl font-anton text-white">MAZ</h1>
+          <Link href="/">
+              <Image
+                src="/assets/logo_maz.png"
+                alt="logo"
+                width={500}
+                height={300}
+                className="filter invert brightness-200"
+              />
+            </Link>
         </div>
         <div className="absolute top-8 right-8 z-30">
           <MobileMenu />
@@ -23,7 +32,7 @@ export default function ProgrammationPage() {
 
       <div className="sticky top-0 z-20 bg-black pt-8 pb-4 shadow-md">
         <div className="max-w-4xl mx-auto px-8 text-center">
-            <h2 className="text-5xl font-anton uppercase font-bold">Programmation</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-anton uppercase font-bold">Programmation</h2>
         </div>
       </div>
 

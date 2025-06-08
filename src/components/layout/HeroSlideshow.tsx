@@ -14,15 +14,15 @@ const slides = [
 ];
 
 export default function HeroSlideshow() {
-
   const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay({ delay: 4000 })]);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Menu mobile en haut à droite */}
-      <div className="absolute top-8 right-8 z-30">
+      <div className="absolute top-4 right-4 md:top-8 md:right-8 z-30">
         <MobileMenu />
       </div>
+
       <div className="embla" ref={emblaRef}>
         {/* Conteneur des slides */}
         <div className="embla__container h-full">
@@ -38,32 +38,35 @@ export default function HeroSlideshow() {
           ))}
         </div>
       </div>
-      
-  
+
       {/* Contenu superposé UNIQUE par-dessus le carousel */}
-      <div className="absolute inset-0 flex items-center justify-center text-white p-8 bg-black/10 backdrop-blur-[4px]">
-        <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
-          <div className="text-left">
-            <h1 className="text-9xl font-anton leading-none">MAZ</h1>
-            <p className="text-5xl font-anton mt-4">25—28 SEPTEMBRE</p>
-            <p className="text-5xl font-anton">(2025)</p>
-            <div className="mt-8 text-lg font-medium">
+      <div className="absolute inset-0 flex items-center justify-center text-white p-4 sm:p-6 md:p-8 bg-black/10 backdrop-blur-[4px]">
+        <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-12">
+          <div className="text-center lg:text-left">
+            <Image
+              src="/assets/logo_maz2.png"
+              alt="logo"
+              width={300}
+              height={300}
+              className="filter invert brightness-200"
+            />
+            <p className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-anton mt-2 sm:mt-4">25—28 SEPTEMBRE</p>
+            <p className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-anton">(2025)</p>
+            <div className="mt-4 sm:mt-6 text-xl sm:text-base md:text-xl font-medium">
               <p>Marmande, Nouvelle-Aquitaine</p>
               <p>5ᵉ édition</p>
+              <p>Thème Paris Sportif</p>
             </div>
           </div>
-          <div>
-            <Image
-              src="/assets/coureur.png"
-              alt="Silhouette d'un coureur"
-              width={600}
-              height={600}
-              className="invert"
-            />
-          </div>
+          <Image
+            src="/assets/coureur.png"
+            alt="Silhouette d'un coureur"
+            width={500}
+            height={500}
+            className="invert"
+          />
         </div>
       </div>
     </div>
   );
-  
 }

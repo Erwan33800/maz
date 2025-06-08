@@ -24,9 +24,13 @@ export default function MobileMenu() {
 
   return (
     <>
-      {/* Use a key and a conditional rendering to force re-mount and ensure button is always available */}
+      {/* Bouton menu sticky en haut à droite de l'écran */}
       {!isOpen && (
-        <button key="open-button" onClick={() => setIsOpen(true)} className="z-40 text-white">
+        <button
+          key="open-button"
+          onClick={() => setIsOpen(true)}
+          className="fixed top-4 right-4 md:top-8 md:right-8 z-50 text-white"
+        >
           <Menu size={40} />
         </button>
       )}
