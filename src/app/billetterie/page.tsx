@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import MobileMenu from '@/components/layout/MobileMenu';
+import Footer from '@/components/layout/Footer';
 
 export default function BilletteriePage() {
   return (
@@ -47,6 +48,7 @@ export default function BilletteriePage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
