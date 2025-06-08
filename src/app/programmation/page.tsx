@@ -20,13 +20,13 @@ export default function ProgrammationPage() {
         </div>
       </header>
 
-      <div className="sticky top-0 z-20 bg-white pt-8 pb-4 shadow-md">
+      <div className="sticky top-0 z-20 bg-black pt-8 pb-4 shadow-md">
         <div className="max-w-4xl mx-auto px-8 text-center">
             <h2 className="text-5xl font-anton uppercase font-bold">Programmation</h2>
         </div>
       </div>
 
-      <div className="relative z-10 bg-white">
+      <div className="relative z-10 bg-black">
         <div className="max-w-4xl mx-auto p-8 md:p-16">
           <p className="text-2xl text-center">La programmation sera dévoilée prochainement...</p>
         </div>

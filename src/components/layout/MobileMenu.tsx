@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Portal from '../ui/Portal';
 
 const navLinks = [
   { name: 'Accueil', href: '/' },
@@ -23,35 +24,41 @@ export default function MobileMenu() {
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)} className="z-50 text-white">
-        <Menu size={40} />
-      </button>
+      {/* Use a key and a conditional rendering to force re-mount and ensure button is always available */}
+      {!isOpen && (
+        <button key="open-button" onClick={() => setIsOpen(true)} className="z-40 text-white">
+          <Menu size={40} />
+        </button>
+      )}
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center"
-            variants={menuVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 z-50 text-white">
-              <X size={40} />
-            </button>
-            <nav className="flex flex-col items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-4xl font-anton text-white uppercase hover:text-yellow-400"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </motion.div>
+          <Portal>
+            <motion.div
+              key="menu-overlay"
+              className="fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center"
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-white">
+                <X size={40} />
+              </button>
+              <nav className="flex flex-col items-center gap-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="text-4xl font-anton text-white uppercase hover:text-yellow-400"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </motion.div>
+          </Portal>
         )}
       </AnimatePresence>
     </>

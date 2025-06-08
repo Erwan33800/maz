@@ -21,22 +21,22 @@ export default function BilletteriePage() {
         </div>
       </header>
 
-      <div className="sticky top-0 z-20 bg-white pt-8 pb-4 shadow-md">
+      <div className="sticky top-0 z-20 bg-black pt-8 pb-4 shadow-md">
         <div className="max-w-4xl mx-auto px-8 text-center">
             <h2 className="text-5xl font-anton uppercase font-bold">Billetterie</h2>
         </div>
       </div>
 
-      <div className="relative z-10 bg-white">
+      <div className="relative z-10 bg-black">
         <div className="max-w-4xl mx-auto p-8 md:p-16 text-center">
           <div className="space-y-8 max-w-2xl mx-auto">
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <h3 className="text-3xl font-bold text-gray-800">Pass Kiffeur (3 soirs)</h3>
-              <p className="text-5xl font-anton mt-2 text-gray-900">135€</p>
+            <div className="bg-gray-800 p-8 rounded-lg">
+              <h3 className="text-3xl font-bold text-white">Pass Kiffeur (3 soirs)</h3>
+              <p className="text-5xl font-anton mt-2 text-white">135€</p>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <h3 className="text-3xl font-bold text-gray-800">Pass Kiffeur en Équipe (pour 4)</h3>
-              <p className="text-5xl font-anton mt-2 text-gray-900">500€</p>
+            <div className="bg-gray-800 p-8 rounded-lg">
+              <h3 className="text-3xl font-bold text-white">Pass Kiffeur en Équipe (pour 4)</h3>
+              <p className="text-5xl font-anton mt-2 text-white">500€</p>
             </div>
           </div>
 

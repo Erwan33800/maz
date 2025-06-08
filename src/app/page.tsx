@@ -1,11 +1,9 @@
-import Header from "@/components/layout/Header";
-import Navigation from "@/components/layout/Navigation";
+import HeroSlideshow from '@/components/layout/HeroSlideshow';
 
 export default function Home() {
   return (
     <main>
-      <Header />
-      <Navigation />
+      <HeroSlideshow />
     </main>
   );
 }

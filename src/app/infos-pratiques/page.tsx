@@ -3,7 +3,7 @@ import Image from 'next/image';
 import MobileMenu from '@/components/layout/MobileMenu';
 
 const SectionTitle = ({ id, children }: { id: string; children: React.ReactNode }) => (
-  <h2 id={id} className="text-4xl font-anton uppercase text-[#1a73e8] mt-12 mb-6 scroll-mt-24">
+  <h2 id={id} className="text-4xl font-anton uppercase mt-12 mb-6 scroll-mt-24">
     {children}
   </h2>
 );
@@ -45,12 +45,12 @@ export default function InfosPratiquesPage() {
       </header>
 
       {/* Bottom Section (1/4 screen) - Sticky */}
-      <div className="sticky top-0 z-20 bg-white pt-8 pb-4 shadow-md">
+      <div className="sticky top-0 z-20 bg-black pt-8 pb-4 shadow-md">
         <div className="max-w-4xl mx-auto px-8 text-center">
             <h2 className="text-5xl font-anton uppercase font-bold">Infos Pratiques</h2>
             <nav className="mt-4 flex flex-wrap gap-4 justify-center">
                 {anchorLinks.map(link => (
-                    <a key={link.name} href={link.href} className="font-bold text-gray-700 border-2 border-dashed border-gray-300 rounded-lg px-3 py-1 hover:bg-gray-100 hover:border-gray-400 transition-colors">
+                    <a key={link.name} href={link.href} className="font-bold text-gray-300 border-2 border-dashed border-gray-600 rounded-lg px-3 py-1 hover:bg-gray-800 hover:border-gray-500 transition-colors">
                         {link.name}
                     </a>
                 ))}
@@ -59,7 +59,7 @@ export default function InfosPratiquesPage() {
       </div>
 
       {/* Page Content */}
-      <div className="relative z-10 bg-white">
+      <div className="relative z-10">
         <div className="max-w-4xl mx-auto p-8 md:p-16">
           <div className="text-lg space-y-4 mb-12">
             <p>🎉 Du 25 au 28 septembre 2025</p>
@@ -69,7 +69,7 @@ export default function InfosPratiquesPage() {
           </div>
 
           <section>
-            <SectionTitle id="camping">🏕 CAMPING</SectionTitle>
+            <SectionTitle id="camping">CAMPING</SectionTitle>
             <div className="text-lg space-y-4">
               <p>Tout le monde dort sur place, et tout le monde dort en tente !</p>
               <p>Pas de mobil-home, pas de palace, que des sardines joyeuses dans leurs toiles colorées.</p>
@@ -79,7 +79,7 @@ export default function InfosPratiquesPage() {
           </section>
 
           <section>
-            <SectionTitle id="acces">🚌 ACCÈS & NAVETTES</SectionTitle>
+            <SectionTitle id="acces">ACCÈS & NAVETTES</SectionTitle>
             <div className="text-lg space-y-4">
               <p>📍 L&#39;adresse te sera communiquée quelques jours avant le festival.</p>
               <p>Depuis la gare de Bordeaux, une navette sera dispo :</p>
@@ -87,13 +87,13 @@ export default function InfosPratiquesPage() {
                 <li>Jeudi 25 sept. (aller)</li>
                 <li>Dimanche 28 sept. (retour)</li>
               </ul>
-              <StyledLink href="#">👉 Réserve ta place en navette ici</StyledLink>
+              <StyledLink href="#">Réserve ta place en navette ici</StyledLink>
               <p>(Penses à bien t’inscrire à l’avance, les places sont limitées !)</p>
             </div>
           </section>
 
           <section>
-            <SectionTitle id="stands">🍫 STANDS, BAR & FOLIES LOCALES</SectionTitle>
+            <SectionTitle id="stands">STANDS, BAR & FOLIES LOCALES</SectionTitle>
             <div className="text-lg space-y-4">
               <p>Comme chaque année, nos stands redoublent de créativité pour rendre le festival encore plus zinzin. Voici quelques-uns des incontournables de l’an dernier :</p>
               <ul className="list-disc list-inside">
@@ -109,7 +109,7 @@ export default function InfosPratiquesPage() {
           </section>
 
           <section>
-            <SectionTitle id="deguisements">👕 DÉGUISEMENTS & THÈME : WINAMAZ 🏅</SectionTitle>
+            <SectionTitle id="deguisements">DÉGUISEMENTS & THÈME : WINAMAZ 🏅</SectionTitle>
             <div className="text-lg space-y-4">
               <p>C’est pas une compétition, mais... si, un peu quand même.</p>
               <p>Déguisements d’équipes, supporters farfelus, arbitres corrompus, mascottes dérangées : fais parler ta créativité !</p>
@@ -118,7 +118,7 @@ export default function InfosPratiquesPage() {
           </section>
 
           <section>
-            <SectionTitle id="connecte">📲 RESTE CONNECTÉ</SectionTitle>
+            <SectionTitle id="connecte">RESTE CONNECTÉ</SectionTitle>
             <div className="text-lg space-y-4">
               <p>Tout au long de l’été, retrouve :</p>
               <ul className="list-disc list-inside">
