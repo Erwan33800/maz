@@ -53,34 +53,40 @@ export default function EntryAnimation() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed inset-0 z-50 flex flex-row items-center justify-center gap-16 bg-[#1a73e8]"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        className="fixed inset-0 z-50 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16 bg-[#1a73e8]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      >
+        <motion.h1
+          variants={childVariants}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         >
-          <motion.h1
-            className="text-9xl font-anton text-white"
-            variants={childVariants}
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          >
-            MAZ
-          </motion.h1>
-          <motion.div
-            variants={childVariants}
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
-          >
-            <Image
-              src="/assets/plongeur.png"
-              alt="Silhouette d'un plongeur"
-              width={200}
-              height={200}
-              className="invert"
-            />
-          </motion.div>
+          <Image
+            src="/assets/logo_maz2.png"
+            alt="logo"
+            width={300}
+            height={300}
+            className="filter invert brightness-200"
+          />
+        </motion.h1>
+        <motion.div
+          variants={childVariants}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
+        >
+          <Image
+            src="/assets/plongeur.png"
+            alt="Silhouette d'un plongeur"
+            width={200}
+            height={200}
+            className="invert"
+          />
         </motion.div>
+      </motion.div>
+      
       )}
     </AnimatePresence>
   );
