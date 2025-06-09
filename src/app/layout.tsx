@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton } from "next/font/google";
 import "./globals.css";
 import EntryAnimation from "@/components/animations/EntryAnimation";
+import { Analytics } from "@vercel/analytics/next";
 
 const anton = Anton({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className="min-h-screen">
         <EntryAnimation />
         {children}
+        <Analytics />
       </body>
     </html>
   );
