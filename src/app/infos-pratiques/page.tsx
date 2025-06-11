@@ -96,7 +96,7 @@ export default function InfosPratiquesPage() {
                 <li>Les célèbres druides et leur potion magique tant désirée !</li>
               </ul>
               <p>Tu veux proposer un stand cette année ?</p>
-              <StyledLink href="https://forms.gle/FPhyGtnGrZ9FUHK59">Inscrir son stand</StyledLink>
+              <StyledLink href="https://forms.gle/FPhyGtnGrZ9FUHK59">Inscrire son stand</StyledLink>
               <p className='pt-2'>Toutes les idées sont bienvenues : sportifs, loufoques, détente ou déjantées. L’essentiel, c’est de participer !</p>
             </div>
           </section>
