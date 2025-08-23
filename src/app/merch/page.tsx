@@ -7,18 +7,18 @@ import MobileMenu from '@/components/layout/MobileMenu';
 import Footer from '@/components/layout/Footer';
 
 export default function MerchPage() {
-  useEffect(() => {
-    const handleMessage = (e: MessageEvent) => {
-      const dataHeight = (e.data as any).height
-      const haWidgetElement = document.getElementById("haWidget") as HTMLIFrameElement
-      if (dataHeight && haWidgetElement) {
+    useEffect(() => {
+    const handleMessage = (e: MessageEvent<{ height?: number }>) => {
+        const dataHeight = e.data?.height
+        const haWidgetElement = document.getElementById("haWidget") as HTMLIFrameElement
+        if (dataHeight && haWidgetElement) {
         haWidgetElement.style.height = `${dataHeight}px`
-      }
+        }
     }
 
     window.addEventListener("message", handleMessage)
     return () => window.removeEventListener("message", handleMessage)
-  }, [])
+    }, [])
 
   return (
     <div>
