@@ -11,6 +11,7 @@ const navLinks = [
   { name: 'Infos Pratiques', href: '/infos-pratiques' },
   { name: 'Billetterie', href: '/billetterie' },
   { name: 'Programmation', href: '/programmation' },
+  { name: 'Boutique', href: '/merch' },
 ];
 
 export default function MobileMenu() {
