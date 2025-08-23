@@ -24,11 +24,12 @@ export default function MerchPage() {
     <div>
         <header className="relative h-[75vh] w-full overflow-hidden">
             <Image
-            src="/assets/slides/sceno.JPG"
-            alt="Background"
-            fill
-            quality={100}
-            className="object-cover z-0"
+                src="/assets/slides/sceno.jpg"
+                alt="Background"
+                fill
+                priority
+                quality={100}
+                className="object-cover z-0"
             />
             <div className="relative z-20 flex justify-center items-start h-full p-8">
             <Link href="/">
