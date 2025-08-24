@@ -65,11 +65,12 @@ export default function MerchPage() {
         <div className="flex flex-col justify-center items-center p-4 space-y-6">
             <div className="w-full max-w-4xl">
                 <iframe
-                id="haWidget"
-                title="Boutique Maz Festival"
-                src="https://www.helloasso.com/associations/maz/boutiques/merch-maz-5/widget"
-                loading="lazy"
-                style={{ width: "100%", border: "none" }}
+                    id="haWidget"
+                    title="Boutique Maz Festival"
+                    src="https://www.helloasso.com/associations/maz/boutiques/merch-maz-5/widget"
+                    loading="lazy"
+                    style={{ width: "100%", border: "none" }}
+                    sandbox="allow-scripts allow-same-origin allow-popups"
                 ></iframe>
             </div>
 
