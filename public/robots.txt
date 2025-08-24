@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mazfestival.vercel.app/
+
+# Sitemaps
+Sitemap: https://mazfestival.vercel.app/sitemap.xml
