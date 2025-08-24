@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "MAZ Festival 2025 - Musique Électronique & Ambiance Unique",
   description:
     "Découvrez la programmation du MAZ Festival 2025 à côté de Marmande : DJs, camping, foodtrucks et ambiance électro unique en France.",
+  verification: {
+    google: "Htf2anjFAQRes4oja6UNMh8BUVdeySwYkvhKhazYNHQ"
+  },
   keywords: [
     "festival",
     "musique électronique",
