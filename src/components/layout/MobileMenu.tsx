@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronLeft } from 'lucide-react';
 import Portal from '../ui/Portal';
 
-const mainLinks = [
+const mainLinks: ({ name: string; href: string } | { name: string; isSubmenu: true })[] = [
   { name: 'Accueil', href: '/' },
   { name: '2025', isSubmenu: true },
 ];
@@ -104,16 +104,19 @@ export default function MobileMenu() {
                     transition={{ duration: 0.3 }}
                     className="flex flex-col items-center gap-8"
                   >
-                    {mainLinks.map((link) => (
-                      link.isSubmenu ? (
-                        <button
-                          key={link.name}
-                          onClick={() => setShow2025(true)}
-                          className="text-4xl font-anton text-white uppercase hover:text-yellow-400"
-                        >
-                          {link.name}
-                        </button>
-                      ) : (
+                    {mainLinks.map((link) => {
+                      if ('isSubmenu' in link) {
+                        return (
+                          <button
+                            key={link.name}
+                            onClick={() => setShow2025(true)}
+                            className="text-4xl font-anton text-white uppercase hover:text-yellow-400"
+                          >
+                            {link.name}
+                          </button>
+                        );
+                      }
+                      return (
                         <Link
                           key={link.name}
                           href={link.href}
@@ -122,8 +125,8 @@ export default function MobileMenu() {
                         >
                           {link.name}
                         </Link>
-                      )
-                    ))}
+                      );
+                    })}
                   </motion.nav>
                 )}
               </AnimatePresence>
