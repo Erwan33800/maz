@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import MobileMenu from './MobileMenu';
 import '../../app/embla.css';
 import { Fascinate } from 'next/font/google';
 
@@ -15,7 +16,11 @@ const fascinate = Fascinate({
 export default function ThanksLayout() {
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">      
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* Menu burger */}
+      <div className="absolute top-8 right-8 z-30">
+        <MobileMenu />
+      </div>
 
       <div className="embla">
         {/* Conteneur des slides */}
